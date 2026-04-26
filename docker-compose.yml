@@ -1,0 +1,28 @@
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: habitforge-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: habitforge
+      MYSQL_USER: habitforge
+      MYSQL_PASSWORD: habitforge_pass
+      MYSQL_ROOT_PASSWORD: root_pass
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  adminer:
+    image: adminer:4.8.1
+    container_name: habitforge-adminer
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+
+volumes:
+  mysql_data:
+
+

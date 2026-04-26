@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HabitForge Icon Generator</title>
+</head>
+<body>
+    <h2>HabitForge Icon Generator</h2>
+    <p>Открой эту страницу в браузере, иконка будет создана автоматически.</p>
+    <p>Правой кнопкой мыши на изображении → "Сохранить изображение как..." → сохрани как icon.png</p>
+    
+    <canvas id="iconCanvas" width="1024" height="1024"></canvas>
+    
+    <script>
+        const canvas = document.getElementById('iconCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Фиолетовый фон
+        ctx.fillStyle = '#7C3AED'; // Тот же фиолетовый, что в приложении
+        ctx.fillRect(0, 0, 1024, 1024);
+        
+        // Белые буквы HF
+        ctx.fillStyle = '#FFFFFF';
+        ctx.font = 'bold 600px Arial, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('HF', 512, 512);
+        
+        // Создаём ссылку для скачивания
+        canvas.toBlob(function(blob) {
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'icon.png';
+            a.textContent = 'Скачать иконку';
+            a.style.display = 'block';
+            a.style.marginTop = '20px';
+            a.style.padding = '10px';
+            a.style.backgroundColor = '#7C3AED';
+            a.style.color = 'white';
+            a.style.textDecoration = 'none';
+            a.style.borderRadius = '5px';
+            document.body.appendChild(a);
+        });
+    </script>
+</body>
+</html>
+

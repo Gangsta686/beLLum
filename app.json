@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "beLLum",
+    "slug": "bellum",
+    "version": "1.0.3",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": false,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#7C3AED"
+    },
+    "ios": {
+      "bundleIdentifier": "com.habitforge.app",
+      "supportsTablet": true,
+      "buildNumber": "1",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSPhotoLibraryUsageDescription": "Нужно разрешение для выбора аватара из галереи."
+      }
+    },
+    "android": {
+      "package": "com.habitforge.app",
+      "versionCode": 4,
+      "icon": "./assets/icon.png",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#7C3AED"
+      },
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "favicon": "./assets/icon.png"
+    },
+    "plugins": ["expo-image-picker"],
+    "extra": {
+      "eas": {
+        "projectId": "46d6a424-dccd-492b-9dd5-2ff0bb70a87f"
+      }
+    },
+    "owner": "david0401"
+  }
+}
