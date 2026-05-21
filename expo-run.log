@@ -1,0 +1,21 @@
+env: load .env
+env: export EXPO_PUBLIC_SUPABASE_URL EXPO_PUBLIC_SUPABASE_ANON_KEY
+Starting project at C:\Users\dav04\OneDrive\Desktop\beLLum
+(node:10864) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Metro is running in CI mode, reloads are disabled. Remove CI=true to enable watch mode.
+Starting Metro Bundler
+warning: Bundler cache is empty, rebuilding (this may take a minute)
+The following packages should be updated for best compatibility with the installed expo version:
+  @react-native-async-storage/async-storage@1.24.0 - expected version: 2.2.0
+  expo@54.0.31 - expected version: ~54.0.34
+  expo-file-system@19.0.21 - expected version: ~19.0.22
+  expo-image-picker@17.0.10 - expected version: ~17.0.11
+  expo-linear-gradient@13.0.2 - expected version: ~15.0.8
+  expo-notifications@0.32.16 - expected version: ~0.32.17
+Your project may not work correctly until you install the expected versions of the packages.
+› Opening exp://192.168.0.13:8081 on Pixel_7_Pro
+- Fetching Expo Go
+Networking has been disabled
+- Fetching Expo Go
+CommandError: Network connection is unreliable. Try again with the environment variable `EXPO_OFFLINE=1` to skip network requests.

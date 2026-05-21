@@ -1,8 +1,9 @@
 {
   "expo": {
     "name": "beLLum",
-    "slug": "bellum",
+    "slug": "HabitForge",
     "version": "1.0.3",
+    "scheme": "bellum",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -23,7 +24,11 @@
     },
     "android": {
       "package": "com.habitforge.app",
-      "versionCode": 4,
+      "versionCode": 5,
+      "permissions": [
+        "INTERNET",
+        "ACCESS_NETWORK_STATE"
+      ],
       "icon": "./assets/icon.png",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
@@ -34,7 +39,11 @@
     "web": {
       "favicon": "./assets/icon.png"
     },
-    "plugins": ["expo-image-picker"],
+    "plugins": [
+      "expo-image-picker",
+      "expo-localization",
+      "expo-asset"
+    ],
     "extra": {
       "eas": {
         "projectId": "46d6a424-dccd-492b-9dd5-2ff0bb70a87f"
